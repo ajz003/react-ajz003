@@ -5,6 +5,7 @@ module.exports = {
       url: `https://anthonyz.dev`,
       description: `Anthony Zheng is a Californian chemistry major turned web developer who is eager to learn and loves to implement.`
     },
+    pathPrefix: "/react-ajz003",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
