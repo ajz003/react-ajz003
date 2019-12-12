@@ -1,9 +1,10 @@
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-  },
+
+    siteMetadata: {
+      title: 'Anthony Zheng | Web Developer',
+      url: `https://anthonyz.dev`,
+      description: `Anthony Zheng is a Californian chemistry major turned web developer who is eager to learn and loves to implement.`
+    },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -27,6 +28,8 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-transition-link`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

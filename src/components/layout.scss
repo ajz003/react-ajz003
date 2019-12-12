@@ -1,0 +1,67 @@
+$header-font: 'Roboto', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+$primary-color: #333;
+$pt-navbar-height: 50px;
+
+
+body {
+  font: 100% $body-font;
+  font-size: 16px;
+  color: $primary-color;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font: 100% $header-font;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+  &:active {
+    opacity: 0.32;
+  }
+
+  &.active {
+    transition: background-color 300ms;
+
+    .MuiButton-root {
+      color: white;
+      background-color: #000000de;
+    }
+  }
+
+  &.menu-item {
+    text-decoration: none;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    color: #182026;
+    margin: 0 16px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.menu-left  {
+  flex-grow: 1;
+  padding-left: 12px;
+}
+
+.name .MuiButton-root {
+  font-weight: bold;
+}
+
+header.MuiPaper-root {
+  background-color: #f4f4f4;
+}
