@@ -15,36 +15,21 @@ const Header = ({ siteTitle, menuLinks }) => (
 
    <Toolbar>
    <AniLink title="Anthony Zheng" className="menu-item name" cover duration={1} direction="left" to="/"
-              bg="
-              url(https://source.unsplash.com/collection/416011)
-              center / cover
-              "
+              bg="#663399"
             ><Button>Anthony Zheng</Button></AniLink>
             |
 <div className="menu-left">
             <AniLink title="Home" className="menu-item" activeClassName="active" cover duration={1} direction="left" to="/"
-              bg="
-              url(https://source.unsplash.com/collection/416011)
-              center / cover
-              "
+              bg="#663399"
             ><Button>Home</Button></AniLink>
             <AniLink title="About" className="menu-item" activeClassName="active" cover duration={1} direction="right" to="/about"
-              bg="
-              url(https://source.unsplash.com/collection/4967134)
-              center / cover
-              "
+              bg="#663399"
             ><Button>About</Button></AniLink>
             <AniLink title="Portfolio" className="menu-item" activeClassName="active" cover duration={1} direction="right" to="/portfolio"
-              bg="
-              url(https://source.unsplash.com/collection/335434)
-              center / cover
-              "
+              bg="#663399"
             ><Button>Portfolio</Button></AniLink>
             <AniLink title="Contact" className="menu-item" activeClassName="active" cover duration={1} direction="right" to="/contact"
-              bg="
-              url(https://source.unsplash.com/collection/3570256)
-              center / cover
-              "
+              bg="#663399"
             ><Button>Contact</Button></AniLink>
 </div>
                   <a href="https://github.com/ajz003" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
