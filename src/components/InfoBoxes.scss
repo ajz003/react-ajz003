@@ -1,0 +1,28 @@
+.label-info {
+    background-color: transparent;
+    color: #5bc0de;
+    border: 1px solid #5bc0de;
+    font-weight: 300;
+  }
+  
+  .list-inline {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    list-style: none;
+  }
+  .list-inline>li {
+    display: inline-block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .label {
+    display: inline;
+    font-size: 1.25rem;
+    padding: .2rem .6rem .2rem;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+  }

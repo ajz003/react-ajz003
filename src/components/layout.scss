@@ -2,7 +2,7 @@ $header-font: 'Roboto', sans-serif;
 $body-font: 'Open Sans', sans-serif;
 $primary-color: #333;
 $pt-navbar-height: 50px;
-
+@import "~bulma/bulma.sass";
 
 body {
   font: 100% $body-font;
@@ -11,15 +11,30 @@ body {
   margin: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font: 100% $header-font;
+  margin-bottom: 0.625rem;
 }
 
-h1, h2 {
+h1, h3, h5 {
   font-weight: bold;
 }
 
-a {
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.125rem;
+}
+p {
+  line-height: 1.8;
+  margin: 0 0 0.75rem;
+}
+
+a.menu-item {
   color: $primary-color;
 
   &:hover {
@@ -40,6 +55,7 @@ a {
 
   &.menu-item {
     text-decoration: none;
+    margin-right: 32px;
   }
 
   .social-icon {
@@ -65,3 +81,28 @@ a {
 header.MuiPaper-root {
   background-color: #f4f4f4;
 }
+
+footer.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 8px;
+}
+
+@media (max-width:1023px) {
+  .MuiAppBar-root {
+    padding: 0.5rem 0;
+  }
+  .menu-right {
+    display: flex;
+    flex-direction: column;
+    .menu-item {
+      margin-bottom: 0.5rem;
+    }
+  }  
+}
+

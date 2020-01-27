@@ -32,3 +32,11 @@ h1.hero-text {
     margin-top: 0;
 }
 
+@media (max-width:1023px) {
+    h1.hero-text {
+        font-size: 4rem;
+    }
+    main .home-background .hero-text-wrapper p {
+        font-size: 1.5rem;
+    }
+  }
