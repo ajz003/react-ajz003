@@ -26,7 +26,7 @@ function PortfolioRow(props) {
 <div className="column">
       <div className="columns">
       <PortfolioItem
-        imgSrc="/images/olymkets.png"
+        imgSrc="https://anthonyz.dev/assets/images/olymkets.png"
         appHref="https://anthonyz.dev/Summon-Simulator/"
         githubHref=""
         description={<p><strong>Olymkets Ticket Tracker</strong> is a service that tracks the 2020 Tokyo Olympics ticket availability from the US ticket seller <a className="in-link" href="https://www.cosport.com/default.aspx" target="_blank">CoSport</a>. It will send you a text message with info about the availability about Olympic events and at a repeated time interval of your choosing.</p>}
@@ -56,7 +56,7 @@ function PortfolioRow(props) {
       />
       <div className="column is-1"></div>
       <PortfolioItem
-        imgSrc="/images/dadbase.png"
+        imgSrc="https://anthonyz.dev/assets/images/dadbase.png"
         appHref="https://dad-a-base.herokuapp.com/"
         githubHref=""
         description={<p><strong>dad-a-base</strong> is a website that scrapes dad-related news and articles from the top dad websites. It helps users find parenting tips, activities to do with their kids, and allows them to connect with others with a built-in forum. Users can log in (via e-mail or Facebook), create discussions, and respond to others' posts. Built with React and Node.</p>}
