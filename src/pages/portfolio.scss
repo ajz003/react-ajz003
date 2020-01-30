@@ -1,0 +1,42 @@
+.portfolio-page {
+    background-color: #171717;
+    color: #bbb;
+
+    .portfolio-item {
+        background-color: #4a4a4a;
+        border-radius: 16px;
+        padding: 1.5rem;
+        display: grid;
+        grid-template-rows: 300px 1fr 0.3fr;
+
+        a.in-link {
+            color:#32ccdc;
+            &:hover {
+                color: #3273dc;
+            }
+        }
+
+        a.image-link {
+            display: flex; // make us of Flexbox
+            align-items: center; // does vertically center the desired content
+            justify-content: center; // horizontally centers single line items
+            text-align: center; // optional, but helps horizontally center text that breaks into multiple lines
+            height: 300px;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        a.button:hover {
+            opacity: 0.5;
+        }
+        img {
+            max-height: 100%;
+        }
+        .text-wrapper {
+            margin-top: 0.75rem;
+            strong {
+                color: inherit;
+            }
+        }
+    }
+}
