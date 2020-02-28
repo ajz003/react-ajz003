@@ -1,13 +1,19 @@
 .portfolio-page {
     background-color: #171717;
     color: #bbb;
+    min-height: calc(100vh - 106px);
 
     .portfolio-item {
         background-color: #4a4a4a;
         border-radius: 16px;
+        border: 2px solid #333;
         padding: 1.5rem;
         display: grid;
         grid-template-rows: 300px 1fr 0.3fr;
+
+        &:hover {
+            border-color: #5d5d5d;
+        }
 
         a.in-link {
             color:#32ccdc;
@@ -23,20 +29,18 @@
             text-align: center; // optional, but helps horizontally center text that breaks into multiple lines
             height: 300px;
             &:hover {
-                opacity: 0.5;
+                opacity: 0.7;
             }
         }
         a.button:hover {
-            opacity: 0.5;
+            opacity: 0.7;
         }
         img {
             max-height: 100%;
         }
         .text-wrapper {
             margin-top: 0.75rem;
-            strong {
-                color: inherit;
-            }
+
         }
     }
 }

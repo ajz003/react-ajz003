@@ -37,7 +37,7 @@ const AboutPage = () => (
           <p>I like to create tools and applications to help people with whatever they need help with. I’m a jack-of-all-trades and I jump at opportunities to learn new things. I believe that having knowledge in a diverse number of fields leads to well-rounded products that anyone can use.
           </p>
           <p>
-            I have experience with front end web development tech like HTML/CSS, jQuery, and React, as well as back end technlogies and tools like Node/Express, MySQL, Heroku, and Netlify. I’m detail-oriented and I strive to collaborate with others to make clean and intuitive applications.
+            I have experience with front end web development tech like HTML/CSS, jQuery, and <strong>React</strong>, as well as back end technlogies and tools like <strong>Node/Express</strong>, MySQL, Heroku, and Netlify. I’m detail-oriented and I strive to collaborate with others to make clean and intuitive applications.
           </p>
 </div>
 </div>
