@@ -1,0 +1,28 @@
+$navbar-background-color: #101010;
+$navbar-item-color: #f1f1f1;
+$navbar-item-hover-color: #fff;
+$navbar-item-hover-background-color: #4a4a4a;
+
+.navbar {
+
+}
+
+a.navbar-item, .navbar-link {
+
+    &:hover {
+        transition-duration: .1s;
+        .social-icon {
+            color: #13aff0;
+          }
+    }
+
+    .social-icon {
+        color: #747474;
+        height: 32px;
+        width: auto;
+      }
+}
+
+.name {
+    font-weight: bold;
+}

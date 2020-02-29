@@ -1,19 +1,30 @@
 $header-font: 'Roboto', sans-serif;
 $body-font: 'Open Sans', sans-serif;
-$primary-color: #333;
-$pt-navbar-height: 50px;
+$primary-color: #bbb;
+$emphasis-color: #fff;
+
+@import "./header.scss";
+@import "./footer.scss";
 @import "~bulma/bulma.sass";
 
 body {
   font: 100% $body-font;
   font-size: 16px;
+  font-size: 1rem;
   color: $primary-color;
   margin: 0;
+  background-color: #171717;
+}
+
+
+.body-wrapper {
+  margin-top: 3.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font: 100% $header-font;
   margin-bottom: 0.625rem;
+  color: #f1f1f1;
 }
 
 h1, h3, h5 {
@@ -34,75 +45,11 @@ p {
   margin: 0 0 0.75rem;
 }
 
-a.menu-item {
-  color: $primary-color;
-
-  &:hover {
-    color: $primary-color;
-  }
-  &:active {
-    opacity: 0.32;
-  }
-
-  &.active {
-    transition: background-color 300ms;
-
-    .MuiButton-root {
-      color: white;
-      background-color: #000000de;
-    }
-  }
-
-  &.menu-item {
-    text-decoration: none;
-    margin-right: 32px;
-  }
-
-  .social-icon {
-    width: 32px;
-    height: 32px;
-    color: #182026;
-    margin: 0 16px;
-    &:hover {
-      opacity: 0.5;
-    }
-  }
+strong {
+  color: $emphasis-color;
 }
 
-.menu-left  {
-  flex-grow: 1;
-  padding-left: 12px;
-}
+@media (max-width:576px) {
 
-.name .MuiButton-root {
-  font-weight: bold;
-}
-
-header.MuiPaper-root {
-  background-color: #f4f4f4;
-}
-
-footer.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  text-align: center;
-  font-size: 0.875rem;
-  padding: 8px;
-}
-
-@media (max-width:767px) {
-  .MuiAppBar-root {
-    padding: 0.5rem 0;
-  }
-  .menu-right {
-    display: flex;
-    flex-direction: column;
-    .menu-item {
-      margin-bottom: 0.5rem;
-    }
-  }  
 }
 
