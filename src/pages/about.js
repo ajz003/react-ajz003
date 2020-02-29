@@ -1,10 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import InfoBoxes from "../components/InfoBoxes"
+
+import { GoMarkGithub } from 'react-icons/go'
+import { FaLinkedin } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 import "./about.scss"
 
@@ -45,6 +47,13 @@ const AboutPage = () => (
 <div className="column is-6 is-offset-3">
           <h4>Contact</h4>
           <a href="mailto:ajz003@ucla.edu">ajz003@ucla.edu</a>
+          <div className="columns is-mobile about-social-icons">
+
+            <a className="navbar-item column is-narrow" href="mailto:ajz003@ucla.edu"><MdEmail className="social-icon" /></a>  
+            <a target="_blank" rel="noopener noreferrer" className="navbar-item column is-narrow" href="https://github.com/ajz003" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
+    <a target="_blank" rel="noopener noreferrer" className="navbar-item column is-narrow" href="https://www.linkedin.com/in/anthony-zheng/" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
+
+          </div>
 </div>
 </div>
 </div>

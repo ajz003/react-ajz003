@@ -3,10 +3,6 @@ $navbar-item-color: #f1f1f1;
 $navbar-item-hover-color: #fff;
 $navbar-item-hover-background-color: #4a4a4a;
 
-.navbar {
-
-}
-
 a.navbar-item, .navbar-link {
 
     &:hover {
@@ -23,6 +19,7 @@ a.navbar-item, .navbar-link {
       }
 }
 
-.name {
+.navbar-item.name {
     font-weight: bold;
+    padding-right: 1.5rem; 
 }

@@ -1,11 +1,9 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
 import { GoMarkGithub } from 'react-icons/go'
 import { FaLinkedin } from 'react-icons/fa'
 
-import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 var classNames = require('classnames');
@@ -50,15 +48,9 @@ return (
         "
       >Portfolio</AniLink>
     
-      <AniLink title="Contact" className="modal-menu-item column" onClick={props.closeMenu} cover duration={1} direction="right" to="/contact"
-        bg="
-        url(https://source.unsplash.com/collection/3570256)
-        center / cover
-        "
-      >Contact</AniLink>
       <div className="modal-menu-item column">
-      <a href="https://github.com/ajz003" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
-    <a href="https://www.linkedin.com/in/anthony-zheng/" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>  
+      <a href="https://github.com/ajz003" rel="noopener noreferrer" target="_blank" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
+    <a href="https://www.linkedin.com/in/anthony-zheng/" rel="noopener noreferrer" target="_blank" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>  
       </div>
   </div>
     </div>

@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 import "./portfolio.scss"
@@ -10,7 +8,7 @@ import "./portfolio.scss"
 function PortfolioItem(props) {
   return(
     <div className="column portfolio-item">
-      <a class="image-link" href={props.appHref}><img src={props.imgSrc} /></a>
+      <a class="image-link" href={props.appHref}><img alt={props.description} src={props.imgSrc} /></a>
 <div className="text-wrapper">
     {props.description}
     </div>
@@ -29,7 +27,7 @@ function PortfolioRow(props) {
         imgSrc="https://anthonyz.dev/assets/images/olymkets.png"
         appHref="https://anthonyz.dev/Summon-Simulator/"
         githubHref=""
-        description={<p><strong>Olymkets Ticket Tracker</strong> is a service that tracks the 2020 Tokyo Olympics ticket availability from the US ticket seller <a className="in-link" href="https://www.cosport.com/default.aspx" target="_blank">CoSport</a>. It will send you a text message with info about the availability about Olympic events and at a repeated time interval of your choosing.</p>}
+        description={<p><strong>Olymkets Ticket Tracker</strong> is a service that tracks the 2020 Tokyo Olympics ticket availability from the US ticket seller <a className="in-link" href="https://www.cosport.com/default.aspx" rel="noopener noreferrer" target="_blank">CoSport</a>. It will send you a text message with info about the availability about Olympic events and at a repeated time interval of your choosing.</p>}
         buttons={[
           {
           text: "GitHub",

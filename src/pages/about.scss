@@ -5,4 +5,12 @@
      box-sizing: border-box;
      margin-bottom: 1.5rem;
  }
+
+ .about-social-icons {
+     justify-content: center;
+     margin-top: 1rem;
+     .social-icon {
+         padding: 0;
+ }
+}
 }
