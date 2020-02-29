@@ -8,7 +8,7 @@ import { FaLinkedin } from 'react-icons/fa'
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const Header = ({ siteTitle, menuLinks }) => (
+const Header = (props) => (
 
 
 
@@ -21,7 +21,7 @@ const Header = ({ siteTitle, menuLinks }) => (
     "
   >Anthony Zheng</AniLink>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onClick={props.toggleMenu}>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>

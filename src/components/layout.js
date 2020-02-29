@@ -11,30 +11,44 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import Modal from "./modal"
 import "./layout.scss"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        className="body-wrapper"
-      >
-        <main>{children}</main>
-        <Footer />
-      </div>
-    </>
-  )
+class Layout extends React.Component  {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuOpen: false
+    }
+    this.toggleMenu = this.toggleMenu.bind(this)
+    this.closeMenu = this.closeMenu.bind(this)
+  }
+
+  toggleMenu() {
+    this.setState({menuOpen: !this.state.menuOpen})
+  }
+  closeMenu() {
+    this.setState({menuOpen: false})
+  }
+  
+  render() {
+
+    var menuOpen = this.state.menuOpen
+    return (
+      <>
+        <Modal menuOpen={menuOpen} toggleMenu={this.toggleMenu} closeMenu={this.closeMenu} />
+        <Header menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
+        <div
+          className="body-wrapper"
+        >
+          <main>{this.props.children}</main>
+          <Footer />
+        </div>
+      </>
+    )    
+  }
+
 }
 
 Layout.propTypes = {

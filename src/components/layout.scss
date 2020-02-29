@@ -5,6 +5,7 @@ $emphasis-color: #fff;
 
 @import "./header.scss";
 @import "./footer.scss";
+@import "./modal.scss";
 @import "~bulma/bulma.sass";
 
 body {
@@ -13,12 +14,13 @@ body {
   font-size: 1rem;
   color: $primary-color;
   margin: 0;
-  background-color: #171717;
+  background-color: #171717;  
+  position: relative;
 }
-
 
 .body-wrapper {
   margin-top: 3.25rem;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
