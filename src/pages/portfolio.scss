@@ -10,6 +10,7 @@
         padding: 1.5rem;
         display: grid;
         grid-template-rows: 300px 1fr 0.3fr;
+        margin: 1rem;
 
         &:hover {
             border-color: #5d5d5d;
@@ -58,6 +59,15 @@
     .portfolio-page {
         .portfolio-item {
             margin: 1rem;
+        }
+    }
+}
+
+@media screen and (orientation:landscape)
+and (max-width: 991px) {
+    .portfolio-page {
+        .portfolio-items {
+           display: block;
         }
     }
 }

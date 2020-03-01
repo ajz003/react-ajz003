@@ -83,3 +83,20 @@
         display: none;
     }
 }
+
+@media screen and (orientation:landscape)
+and (max-width: 991px) {
+    .message-menu.message {
+
+        .modal-menu-body {
+            height: 80%;
+            .columns {
+                display: block;
+                font-size: 1rem;
+            }
+        }
+        .message-header {
+            padding: 0.25em;
+        }
+    }
+}

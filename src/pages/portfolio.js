@@ -22,7 +22,7 @@ function PortfolioItem(props) {
 function PortfolioRow(props) {
   return(
 <div className="column">
-      <div className="columns">
+      <div className="columns portfolio-items">
       <PortfolioItem
         imgSrc="/images/olymkets.png"
         appHref="https://ajz003.github.io/Summon-Simulator/"
@@ -35,7 +35,6 @@ function PortfolioRow(props) {
           }
       ]}
       />
-      <div className="column is-1"></div>
       <PortfolioItem
         imgSrc="/images/redorb.png"
         appHref="https://ajz003.github.io/Summon-Simulator/"
@@ -52,7 +51,6 @@ function PortfolioRow(props) {
             }
       ]}
       />
-      <div className="column is-1"></div>
       <PortfolioItem
         imgSrc="/images/dadbase.png"
         appHref="https://dad-a-base.herokuapp.com/"
