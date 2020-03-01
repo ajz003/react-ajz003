@@ -69,6 +69,9 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
+      <link rel="icon" 
+      type="image/ico" 
+      href="images/favicon.ico"></link>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,500,700&display=swap" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     </Helmet>
