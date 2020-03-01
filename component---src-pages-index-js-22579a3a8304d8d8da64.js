@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{RXBc:function(e,a,n){"use strict";n.r(a);var t=n("q1tI"),r=n.n(t),l=n("Bl7J"),c=n("vrFN");n("1nrn");a.default=function(){return r.a.createElement(l.a,null,r.a.createElement(c.a,{title:"Home"}),r.a.createElement("div",{className:"home-background"},r.a.createElement("div",{className:"hero-text-wrapper"},r.a.createElement("h1",{className:"hero-text"},"Anthony Zheng"),r.a.createElement("p",null,"Always exploring new horizons"))))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-22579a3a8304d8d8da64.js.map
