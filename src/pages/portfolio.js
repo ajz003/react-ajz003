@@ -25,7 +25,7 @@ function PortfolioRow(props) {
       <div className="columns portfolio-items">
       <PortfolioItem
         imgSrc="/images/olymkets.png"
-        appHref="https://ajz003.github.io/Summon-Simulator/"
+        appHref="https://github.com/ajz003/olympics-ticket-tracker"
         githubHref=""
         description={<p><strong>Olymkets Ticket Tracker</strong> is a service that tracks the 2020 Tokyo Olympics ticket availability from the US ticket seller <a className="in-link" href="https://www.cosport.com/default.aspx" rel="noopener noreferrer" target="_blank">CoSport</a>. It will send you a text message with info about the availability about Olympic events and at a repeated time interval of your choosing.</p>}
         buttons={[

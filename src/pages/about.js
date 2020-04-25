@@ -56,6 +56,15 @@ const AboutPage = () => (
           </div>
 </div>
 </div>
+
+<div className="columns has-text-centered">
+<div className="column is-6 is-offset-3">
+<h3>My Resume</h3>
+<p><a href="/pdfs/fullresume.pdf">View</a></p>
+<p><a href="/pdfs/fullresume.pdf" download>Download</a></p>
+</div>
+</div>
+
 </div>
    </section>
 
@@ -68,7 +77,8 @@ const AboutPage = () => (
 <InfoBoxes
   boxNames={[
     "Full-Time",
-    "Freelance"
+    "Freelance",
+    "Contract"
   ]}
 />
 </div>
@@ -92,13 +102,6 @@ const AboutPage = () => (
 </div>
 </div>
 
-<div className="columns has-text-centered">
-<div className="column is-6 is-offset-3">
-<h3>My Resume</h3>
-<p><a href="/pdfs/fullresume.pdf">View</a></p>
-<p><a href="/pdfs/fullresume.pdf" download>Download</a></p>
-</div>
-</div>
 </div>
    </section>
     
