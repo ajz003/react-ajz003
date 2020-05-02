@@ -1,11 +1,11 @@
 module.exports = {
 
-    siteMetadata: {
-      title: 'Anthony Zheng | Web Developer',
-      url: `https://anthonyz.dev`,
-      description: `Anthony Zheng is a Californian chemistry major turned web developer who is eager to learn and loves to implement.`
-    },
-    pathPrefix: "/react-ajz003",
+  siteMetadata: {
+    title: 'Anthony Zheng | Web Developer',
+    url: `https://anthonyz.dev`,
+    description: `Anthony Zheng is a Californian chemistry major turned web developer who is eager to learn and loves to implement.`
+  },
+  pathPrefix: "/react-ajz003",
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -55,5 +55,20 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
+    {
+      resolve: 'gatsby-source-prismic-graphql',
+      options: {
+        repositoryName: 'ajz003-blog', // required
+        defaultLang: 'en-us', // optional, but recommended
+        path: '/preview', // optional, default: /preview
+        previews: true, // optional, default: false
+        pages: [{ // optional
+          type: 'Article', // TypeName from prismic
+          match: '/article/:uid', // pages will be generated under this pattern
+          previewPath: '/article', // optional path for unpublished documents
+          component: require.resolve('./src/templates/article.js')
+        }]
+      }
+    }
   ],
 }

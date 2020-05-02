@@ -20,7 +20,7 @@ const ModalMenu = (props) => {
 return (
 
 <article className={modalMenuClasses}>
-<div class="modal-background"></div>
+<div className="modal-background"></div>
 <div className="modal-menu-body">
     <div className="message-header">
     <button className="delete" aria-label="delete" onClick={props.closeMenu}></button>
