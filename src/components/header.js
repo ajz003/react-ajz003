@@ -50,6 +50,13 @@ const Header = (props) => (
     "
   >Portfolio</AniLink>
 
+<AniLink title="Blog" className="navbar-item" activeClassName="active" cover duration={1} direction="right" to="/blog/blog-with-gatsby-prismic-part-1"
+    bg="
+    url(https://source.unsplash.com/collection/335434)
+    center / cover
+    "
+  >Blog</AniLink>
+
   </div>
 
 
