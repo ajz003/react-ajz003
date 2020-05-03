@@ -12,16 +12,13 @@ import "./blog.scss"
 const Page = props => {
   const document = props.data.prismic.allArticles.edges.slice(0, 1).pop();
   if (!document) return null;
-  console.log(document)
 
   const blogContent = document.node.body1.map(function (slice, index) {
-    console.log(document.node.body1)
 
     // Render the right markup for the given slice type
 
     // Text Slice
     if (slice.type === 'body_section') {
-      console.log(slice.primary)
       return <RichText render={slice.primary.body_section} linkResolver={linkResolver} />
 
       // Image Gallery Slice
