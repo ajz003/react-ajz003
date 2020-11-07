@@ -27,60 +27,79 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-78c7845babfd040bf4d2.js"
+    "url": "webpack-runtime-db9f48b83656b5a51fc6.js"
   },
   {
-    "url": "styles.0d5772cb4deb5d0fd5bf.css"
+    "url": "framework-305b3707783ccc9d7ca6.js"
   },
   {
-    "url": "styles-07d8fddf4bae1b61695f.js"
-  },
-  {
-    "url": "commons-a7b3b9e3bce304e47409.js"
-  },
-  {
-    "url": "app-9a2169da40bc64c5f7d6.js"
-  },
-  {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-58be84fb0a4e567a4acb.js"
+    "url": "app-1898ccebdbe3b922c5b9.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "11a2e4bdd566edebb074d1469c3cd711"
+    "revision": "bba0de1fc44137f1267d45e40689a22a"
+  },
+  {
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "d274adf0f008ef152ce70a312b04b730"
+    "revision": "f6081b83111aea4128c98944b7fafccc"
   },
   {
-    "url": "component---src-pages-about-js-91d7633b56e8bfac8761.js"
+    "url": "page-data/app-data.json",
+    "revision": "ff15d2a20a860aec8a1ffc3552c7c5b5"
+  },
+  {
+    "url": "polyfill-5204fa10d5950c3006a4.js"
+  },
+  {
+    "url": "styles.db7328ca000c4e66cb6c.css"
+  },
+  {
+    "url": "3eb02001e6ef29f4164fe7476ecdabc3dec7c205-d2328ddc5e65ab8892bb.js"
+  },
+  {
+    "url": "component---src-pages-about-js-05a74177d72a1e148f89.js"
+  },
+  {
+    "url": "252f366e-db08e4627dbe1af74610.js"
+  },
+  {
+    "url": "1bfc9850-1bc6071b7b9ced80e574.js"
+  },
+  {
+    "url": "styles-7d4153d260c0197f0043.js"
   },
   {
     "url": "page-data/about/page-data.json",
-    "revision": "050046d070c19c4f477be1ace352e923"
+    "revision": "f324eea3753e923a0d5d7dcb4da788c5"
   },
   {
-    "url": "component---src-pages-portfolio-js-1ebb16828b9fe4df03cb.js"
+    "url": "page-data/sq/d/1250886518.json",
+    "revision": "4b7ca85b7de1ce4ece891bdf30d7808f"
+  },
+  {
+    "url": "component---src-pages-portfolio-js-30dfa23c297ef92aba17.js"
   },
   {
     "url": "page-data/portfolio/page-data.json",
-    "revision": "8bcfc1220070f713fbee0196c356fe47"
+    "revision": "3b19a66dd478ad64d34782fc4410e5a1"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "8e50940fc4c0bb58113a943c9afba778"
+    "revision": "080528dc4864656645a3c732defdfa33"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, new workbox.strategies.CacheFirst(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\page-data\/.*\/page-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\/page-data\/.*\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 
 /* global importScripts, workbox, idbKeyval */
-
-importScripts(`idb-keyval-iife.min.js`)
+importScripts(`idb-keyval-3.2.0-iife.min.js`)
 
 const { NavigationRoute } = workbox.routing
 
@@ -161,7 +180,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-9a2169da40bc64c5f7d6.js`))) {
+  if (!resources || !(await caches.match(`/app-1898ccebdbe3b922c5b9.js`))) {
     return await fetch(event.request)
   }
 
