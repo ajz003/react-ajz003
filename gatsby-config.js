@@ -8,21 +8,6 @@ module.exports = {
   pathPrefix: "/react-ajz003",
   plugins: [
     {
-      resolve: 'gatsby-source-prismic-graphql',
-      options: {
-        repositoryName: 'ajz003-blog', // required
-        defaultLang: 'en-us', // optional, but recommended
-        path: '/preview', // optional, default: /preview
-        previews: false, // optional, default: false
-        pages: [{ // optional
-          type: 'Article', // TypeName from prismic
-          match: '/blog/:uid', // pages will be generated under this pattern
-          previewPath: '/blog', // optional path for unpublished documents
-          component: require.resolve('./src/templates/blog.js')
-        }]
-      }
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
