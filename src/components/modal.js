@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useEffect } from "react"
+import React from "react"
 
 import { GoMarkGithub } from 'react-icons/go'
 import { FaLinkedin } from 'react-icons/fa'
@@ -17,23 +17,20 @@ const ModalMenu = ({menuOpen, closeMenu}) => {
     "message-menu--open": menuOpen
   })
 
-  useEffect(() => {
-    const close = (e) => {
-      if(e.keyCode === 27){
-        closeMenu();
-      }
+
+  function handleOnKeyDown(e) {
+    if (e.keyCode === 27){
+      closeMenu();
     }
-    window.addEventListener('keydown', close)
-    return () => window.removeEventListener('keydown', close)
-  }, [closeMenu])
+  }
 
   return (
 
     <article className={modalMenuClasses}>
-      <div className="modal-background" onClick={closeMenu}></div>
-      <div className="modal-menu-body">
+      <div className="modal-background" role="button" aria-hidden="true" aria-labelledby="close-menu-1" onKeyDown={closeMenu} onClick={closeMenu}></div>
+      <div className="modal-menu-body"> 
         <div className="message-header">
-          <button className="delete" aria-label="delete" onClick={closeMenu}></button>
+          <button className="delete" id="close-menu-1" aria-label="Close" onKeyDown={(e) => handleOnKeyDown(e)} onClick={closeMenu}></button>
         </div>
         <div className="message-body">
           <div className="columns has-text-centered">
@@ -50,8 +47,8 @@ const ModalMenu = ({menuOpen, closeMenu}) => {
             >Portfolio</Link>
 
             <div className="modal-menu-item column">
-              <a href="https://github.com/ajz003" rel="noopener noreferrer" target="_blank" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
-              <a href="https://www.linkedin.com/in/anthony-zheng/" rel="noopener noreferrer" target="_blank" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
+              <a href="https://github.com/ajz003" aria-label="My GitHub Profile" rel="noopener noreferrer" target="_blank" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
+              <a href="https://www.linkedin.com/in/anthony-zheng/" aria-label="My LinkedIn Profile" rel="noopener noreferrer" target="_blank" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
             </div>
           </div>
         </div>
