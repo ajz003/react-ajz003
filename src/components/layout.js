@@ -14,6 +14,7 @@ class Layout extends React.Component  {
     }
     this.toggleMenu = this.toggleMenu.bind(this)
     this.closeMenu = this.closeMenu.bind(this)
+    this.openMenu = this.openMenu.bind(this)
   }
 
   toggleMenu() {
@@ -22,14 +23,18 @@ class Layout extends React.Component  {
   closeMenu() {
     this.setState({menuOpen: false})
   }
+  openMenu() {
+    this.setState({menuOpen: true})
+  }
   
   render() {
 
-    var menuOpen = this.state.menuOpen
+    let menuOpen = this.state.menuOpen
+
     return (
       <>
         <Modal menuOpen={menuOpen} toggleMenu={this.toggleMenu} closeMenu={this.closeMenu} />
-        <Header menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
+        <Header menuOpen={menuOpen} openMenu={this.openMenu} closeMenu={this.closeMenu} />
         <div
           className="body-wrapper"
         >
