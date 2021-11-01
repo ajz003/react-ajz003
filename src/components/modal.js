@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useEffect } from "react"
 
 import { GoMarkGithub } from 'react-icons/go'
 import { FaLinkedin } from 'react-icons/fa'
@@ -10,32 +10,42 @@ var classNames = require('classnames');
 
 
 
-const ModalMenu = (props) => {
+const ModalMenu = ({menuOpen, closeMenu}) => {
 
   var modalMenuClasses = classNames({
     "message is-large message-menu": true,
-    "message-menu--open": props.menuOpen
+    "message-menu--open": menuOpen
   })
+
+  useEffect(() => {
+    const close = (e) => {
+      if(e.keyCode === 27){
+        closeMenu();
+      }
+    }
+    window.addEventListener('keydown', close)
+    return () => window.removeEventListener('keydown', close)
+  }, [closeMenu])
 
   return (
 
     <article className={modalMenuClasses}>
-      <div className="modal-background" onClick={props.closeMenu}></div>
+      <div className="modal-background" onClick={closeMenu}></div>
       <div className="modal-menu-body">
         <div className="message-header">
-          <button className="delete" aria-label="delete" onClick={props.closeMenu}></button>
+          <button className="delete" aria-label="delete" onClick={closeMenu}></button>
         </div>
         <div className="message-body">
           <div className="columns has-text-centered">
-            <Link title="Home" className="modal-menu-item column" onClick={props.closeMenu} to="/"
+            <Link title="Home" className="modal-menu-item column" onClick={closeMenu} to="/"
 
             >Home</Link>
 
-            <Link title="About" className="modal-menu-item column" onClick={props.closeMenu} to="/about"
+            <Link title="About" className="modal-menu-item column" onClick={closeMenu} to="/about"
 
             >About</Link>
 
-            <Link title="Portfolio" className="modal-menu-item column" onClick={props.closeMenu} to="/portfolio"
+            <Link title="Portfolio" className="modal-menu-item column" onClick={closeMenu} to="/portfolio"
 
             >Portfolio</Link>
 
