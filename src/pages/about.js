@@ -49,9 +49,9 @@ const AboutPage = () => (
           <a href="mailto:ajz003@ucla.edu">ajz003@ucla.edu</a>
           <div className="columns is-mobile about-social-icons">
 
-            <a className="navbar-item column is-narrow" href="mailto:ajz003@ucla.edu"><MdEmail className="social-icon" /></a>  
-            <a target="_blank" rel="noopener noreferrer" className="navbar-item column is-narrow" href="https://github.com/ajz003" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
-    <a target="_blank" rel="noopener noreferrer" className="navbar-item column is-narrow" href="https://www.linkedin.com/in/anthony-zheng/" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
+            <a className="navbar-item column is-narrow" aria-label="Email" href="mailto:ajz003@ucla.edu"><MdEmail className="social-icon" /></a>  
+            <a target="_blank" rel="noopener noreferrer" aria-label="My GitHub Profile" className="navbar-item column is-narrow" href="https://github.com/ajz003" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="My LinkedIn Profile" className="navbar-item column is-narrow" href="https://www.linkedin.com/in/anthony-zheng/" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
 
           </div>
 </div>
