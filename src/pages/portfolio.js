@@ -81,12 +81,12 @@ function PortfolioRow(props) {
 function PortfolioItem(props) {
   return (
     <div className="column portfolio-item">
-      <a target="_blank" rel="noopener noreferrer" class="image-link" href={props.appHref}><img alt={props.description} src={props.imgSrc} /></a>
+      <a target="_blank" rel="noopener noreferrer" className="image-link" href={props.appHref}><img alt={props.description} src={props.imgSrc} /></a>
       <div className="text-wrapper">
         {props.description}
       </div>
       <div className="buttons has-text-centered">
-        {props.buttons.map((button) => <a target="_blank" rel="noopener noreferrer" class="button" href={button.href}>{button.text}</a>)}
+        {props.buttons.map((button) => <a target="_blank" rel="noopener noreferrer" className="button" href={button.href}>{button.text}</a>)}
       </div>
     </div>
   )

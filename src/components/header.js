@@ -8,7 +8,6 @@ import { Link } from 'gatsby'
 const Header = ({ toggleMenu, openMenu, closeMenu }) => {
 
   function handleOnKeyDown(e) {
-    console.log('handleOnKeyDown')
     if (e.keyCode === 27){
       closeMenu();
     } else if (e.keyCode === 13 || e.keyCode === 32) {
