@@ -8,15 +8,12 @@ import { Link } from 'gatsby';
 
 var classNames = require('classnames');
 
-
-
 const ModalMenu = ({menuOpen, closeMenu}) => {
 
   var modalMenuClasses = classNames({
     "message is-large message-menu": true,
     "message-menu--open": menuOpen
   })
-
 
   function handleOnKeyDown(e) {
     if (e.keyCode === 27){
@@ -27,7 +24,7 @@ const ModalMenu = ({menuOpen, closeMenu}) => {
   return (
 
     <article className={modalMenuClasses}>
-      <div className="modal-background" role="button" aria-hidden="true" aria-labelledby="close-menu-1" onKeyDown={closeMenu} onClick={closeMenu}></div>
+      <div className="modal-background" role="button" aria-hidden="true" aria-labelledby="close-menu-1" onKeyDown={(e) => handleOnKeyDown(e)} onClick={closeMenu}></div>
       <div className="modal-menu-body"> 
         <div className="message-header">
           <button className="delete" id="close-menu-1" aria-label="Close" onKeyDown={(e) => handleOnKeyDown(e)} onClick={closeMenu}></button>
