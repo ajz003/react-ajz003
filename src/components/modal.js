@@ -6,6 +6,11 @@ import { FaLinkedin } from 'react-icons/fa'
 
 import { Link } from 'gatsby';
 
+import {
+  LINKEDIN_URL,
+  GITHUB_URL,
+} from '../utils/constants'
+
 var classNames = require('classnames');
 
 const ModalMenu = ({menuOpen, closeMenu}) => {
@@ -44,8 +49,8 @@ const ModalMenu = ({menuOpen, closeMenu}) => {
             >Portfolio</Link>
 
             <div className="modal-menu-item column">
-              <a href="https://github.com/ajz003" aria-label="My GitHub Profile" rel="noopener noreferrer" target="_blank" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
-              <a href="https://www.linkedin.com/in/anthony-zheng/" aria-label="My LinkedIn Profile" rel="noopener noreferrer" target="_blank" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
+              <a href={GITHUB_URL} aria-label="My GitHub Profile" rel="noopener noreferrer" target="_blank" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
+              <a href={LINKEDIN_URL} aria-label="My LinkedIn Profile" rel="noopener noreferrer" target="_blank" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
             </div>
           </div>
         </div>

@@ -5,6 +5,11 @@ import { FaLinkedin } from 'react-icons/fa'
 
 import { Link } from 'gatsby'
 
+import {
+  LINKEDIN_URL,
+  GITHUB_URL,
+} from '../utils/constants'
+
 const Header = ({ toggleMenu, openMenu, closeMenu }) => {
 
   function handleOnKeyDown(e) {
@@ -35,8 +40,8 @@ const Header = ({ toggleMenu, openMenu, closeMenu }) => {
         </div>
 
         <div className="navbar-end">
-          <a className="navbar-item" aria-label="My GitHub Profile" href="https://github.com/ajz003" title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
-          <a className="navbar-item" aria-label="My LinkedIn Profile" href="https://www.linkedin.com/in/anthony-zheng/" title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
+          <a className="navbar-item" aria-label="My GitHub Profile" href={GITHUB_URL} title="My GitHub profile"><GoMarkGithub className="social-icon" /></a>
+          <a className="navbar-item" aria-label="My LinkedIn Profile" href={LINKEDIN_URL} title="My LinkedIn profile"><FaLinkedin className="social-icon" /></a>
         </div>
 
       </div>
